@@ -41,6 +41,7 @@ describe "Bundler" do
     it "should list the awesome_print gem specifying a remote git repository (use github)" do
       expect(@gemfile_text =~ /gem .awesome_print.,.*git.*/).not_to eq(nil)
     end
+  end
 
     describe "groups" do
       after :each do
