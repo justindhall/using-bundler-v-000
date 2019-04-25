@@ -48,16 +48,7 @@ describe "Bundler" do
       end
 
       # http://bundler.io/v1.3/groups.html
-      it "should contain the pry gem in the development group using a hash argument to the gem method" do
-        expect(@gemfile_text =~ /gem .pry.,.*group.*development'?/).not_to eq(nil)
-        expect(@bundle_output =~ /pry/).not_to eq(nil)
 
-        bundle_output_without_development = ""
-        Bundler.with_clean_env do
-          bundle_output_without_development = `bundle --without development`
-        end
-        expect(bundle_output_without_development =~ /pry/).to eq(nil)
-      end
 
       # http://bundler.io/v1.3/groups.html
       it "should contain the rspec gem in the test group using block syntax" do
