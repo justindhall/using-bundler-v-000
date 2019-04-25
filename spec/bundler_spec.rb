@@ -74,13 +74,6 @@ describe "Bundler" do
   end
 
   # This may exist from having run bundle install in other tests
-  describe "bundle install" do
-    describe "Gemfile.lock" do
-      it "should exist after running `bundle install`" do
-        expect(File.exists?('Gemfile.lock')).to eq(true)
-      end
-    end
-  end
 
   describe "integration" do
     before :each do
